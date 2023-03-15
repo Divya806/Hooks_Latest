@@ -3,7 +3,9 @@
 // import ReducerTutorial from './Components/ReducerTutorial';
 // import EffectTutorial1 from "./Components/EffectTutorial1";
 // import Test from './Components/Test';
-import RefTutorial from "./Components/RefTutorial";
+// import RefTutorial from "./Components/RefTutorial";
+// import LayoutEffectTutorial from "./Components/LayoutEffectTutorial";
+import Button from './Components/Button';
 
 function App() {
   return (
@@ -11,8 +13,9 @@ function App() {
       {/* <Testingstate />
       <StateTutorial /> */}
       {/* <ReducerTutorial /> */}
-      <RefTutorial />
+      {/* <RefTutorial /> */}
       {/* <Test /> */}
+      <Button />
     </div>
   );
 }
