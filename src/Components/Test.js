@@ -1,37 +1,25 @@
-import React from 'react'
-import axios from 'axios'
+import React, {useState} from 'react'
 
-class Test extends React.Component {
+function Test() {
+    const initialCount = 0
+    const [count, setCount] = useState(0)
 
-    constructor(props) {
-        super(props)
-        this.state = {
-            posts: []
+    const incrementFive = () => {
+        for(let i=0;i<5;i++) {
+            setCount(prevCount=> prevCount + 1)
         }
     }
 
-    componentDidMount () {
-        axios.get('https://jsonplaceholder.typicode.com/posts')
-        .then(response => {
-            console.log(response)
-            this.setState({posts: response.data})
-        })
-        .catch(error => {
-            console.log(error)
-        })
-    }
+    return(
+        <div>
+            {count}
+            <button onClick={() =>setCount(initialCount)}>Reset {count}</button>
+            <button onClick={()=> setCount(count+1)}>Increment {count}</button>
+            <button onClick={()=> setCount(count-1)}>Decrement {count}</button>
+            <button onClick={incrementFive}>incrementFive</button>
+        </div>
+    )
 
-    render() {
-        const {posts}   = this.state
-        return(
-            <div>
-                {
-                    posts.map(post => <div key={post.id}>{post.id} {post.title}</div>)
-                }
-
-            </div>
-        )
-    }
 }
 
 export default Test

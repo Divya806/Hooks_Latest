@@ -1,14 +1,19 @@
-import React, {useState} from 'react'
+import React, {useState,forwardRef, useImperativeHandle} from 'react'
 
-function Button(){
-    const [toggle, setToggle] = useState(false)
+const Button = forwardRef((props,ref ) => {
+  const [toggle, setToggle] = useState(true)
 
-    return(
-        <div>
-            {toggle && <p>Toggle</p>}
-            <button onClick={()=> setToggle(!toggle)}>Click Me</button>
-        </div>
-    )
-}
+   useImperativeHandle(ref, () => ({
+            alterToggle() {
+            setToggle(!toggle);
+            }
+   }))
+  return(
+    <div>
+        <button onClick={()=>setToggle(!toggle)}>Click Me</button>
+        {toggle && <p>toggle</p>}
+    </div>
+  )
+})
 
 export default Button
