@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 
-function Test() {
+function EffectCounterFunc() {
     const [count, setCount] = useState(0)
     const [name, setName] = useState('')
 
@@ -17,4 +17,4 @@ function Test() {
     )
 }
 
-export default Test
+export default EffectCounterFunc

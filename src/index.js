@@ -9,7 +9,15 @@ import './index.css';
 // import LayoutEffectTutorial from './Components/LayoutEffectTutorial';
 // import Button from './Components/Button';
 // import ImperativeHandle from './Components/ImperativeHandle';
-import Test from './Components/Test';
+// import Test from './Components/Test';
+// import EffectCounterClass from './Components/EffectCounterClass'
+// import ClassMouse from './Components/ClassMouse';
+// import HookCounterThree from './Components/HookCounterThree';
+// import ArrayFour from './Components/ArrayFour';
+// import HookCounterOne from './Components/HookCounterOne';
+// import Effect1 from './Components/Effect1';
+// import IntervalCounter from './Components/IntervalCounter';
+import DataFetching from './Components/DataFetching';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -19,6 +27,10 @@ root.render(
     {/* <EffectTutorial /> */}
     {/* <RefTutorial /> */}
     {/* <LayoutEffectTutorial /> */}
-    <Test />
+    {/* <HookCounterThree /> */}
+    {/* <EffectCounterClass /> */}
+    {/* <ArrayFour /> */}
+    {/* <IntervalCounter /> */}
+    <DataFetching />
   </React.StrictMode>
 );
